@@ -35,7 +35,7 @@ RUN java -Djarmode=layertools -jar application.jar extract
 
 FROM adoptopenjdk:11-jre-hotspot
 WORKDIR application
-EXPOSE 9966
+EXPOSE 8082
 COPY --from=LAYERS_BUILD application/dependencies/ ./
 COPY --from=LAYERS_BUILD application/spring-boot-loader ./
 COPY --from=LAYERS_BUILD application/snapshot-dependencies/ ./
